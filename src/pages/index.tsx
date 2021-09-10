@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const Container = styled.div`
   display: flex;
@@ -106,6 +107,7 @@ const Home: NextPage<Props> = ({ env }) => {
 
   return (
     <Container>
+      <SEO headTitle="" />
       <h1>OG image generator</h1>
 
       <GeneratorWrapper>
