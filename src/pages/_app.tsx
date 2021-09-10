@@ -14,7 +14,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Sample</title>
+        <title>OG image Generator</title>
         <link
           rel="icon"
           href="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
