@@ -4,8 +4,9 @@ export const light = {
   color: '#202020',
   backgroundColor: '#fafafa',
 
-  secondary: '#bd93f9',
   primary: '#ff5555',
+  secondary: '#bd93f9',
+  tertiary: '#44475a',
 };
 
 export const dark = {
@@ -16,4 +17,5 @@ export const dark = {
 
   primary: '#bd93f9',
   secondary: '#ff5555',
+  tertiary: '#44475a',
 };
