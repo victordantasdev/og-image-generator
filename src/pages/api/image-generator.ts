@@ -3,10 +3,29 @@ import { getScreenshot } from '../../../infra/getScreenShot';
 
 interface Props {
   title: string | string[];
-  bg: string | string[];
+  titleFS: string | string[];
+  titleC: string | string[];
+
+  paragraph: string | string[];
+  paragraphFS: string | string[];
+  paragraphC: string | string[];
+
+  background: string | string[];
+  backgroundC: string | string[];
 }
 
-const getHTML = ({ title, bg }: Props) => `
+const getHTML = ({
+  title,
+  titleFS,
+  titleC,
+
+  paragraph,
+  paragraphFS,
+  paragraphC,
+
+  background,
+  backgroundC,
+}: Props) => `
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -19,26 +38,34 @@ const getHTML = ({ title, bg }: Props) => `
         width: 100%;
         height: 100vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         font-family: sans-serif;
 
-        background-color: #666;
-        background-image: url(${bg});
+        background-color: #${backgroundC};
+        background-image: url(${background});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
 
       h1 {
-        font-size: 7vw;
-        color: #fff;
+        font-size: ${titleFS}px;
+        color: #${titleC};
+        text-align: center;
+      }
+
+      p {
+        font-size: ${paragraphFS}px;
+        color: #${paragraphC};
         text-align: center;
       }
     </style>
   </head>
   <body>
     <h1>${title}</h1>
+    <p>${paragraph}</p>
   </body>
   </html>
 `;
@@ -47,7 +74,15 @@ const imageGenerator = async (req: NextApiRequest, res: NextApiResponse) => {
   const isHTMLDebugMode = false;
   const html = getHTML({
     title: req.query.title || 'Sample Text',
-    bg: req.query.bg || '',
+    titleFS: req.query.tfs || '64',
+    titleC: req.query.tc || '#ffffff',
+
+    paragraph: req.query.p || '',
+    paragraphFS: req.query.pfs || '32',
+    paragraphC: req.query.pc || '#ffffff',
+
+    background: req.query.bg || '',
+    backgroundC: req.query.bgc || '#666666',
   });
 
   if (isHTMLDebugMode) {
@@ -55,7 +90,6 @@ const imageGenerator = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.end(html);
   }
 
-  // const file = await getScreenshot(html, { width: 1920, height: 1080 });
   const file = await getScreenshot(html);
   res.setHeader('Content-type', 'image/png');
   return res.end(file);
