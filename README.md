@@ -9,6 +9,6 @@
 
 ### You can check out the project [here](https://og-image-generator-pi.vercel.app/)
 
-![project_demo](https://user-images.githubusercontent.com/64330605/132852933-e070395c-b149-479e-a501-0b6a1b8e2acf.gif)
+![project_demo](https://user-images.githubusercontent.com/64330605/132854921-47423291-693c-469c-9c83-6e9dab9165cf.gif)
 
 This project is based on this [video](https://youtu.be/V5rWRA0phLw) form [Mário Souto](https://github.com/omariosouto).
