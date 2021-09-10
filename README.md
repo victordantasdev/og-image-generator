@@ -1,69 +1,14 @@
-# Next app with TypeScript, Eslint and Styled-Components - template
+# 🖼️ Open Graph Image Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![![node]](https://img.shields.io/badge/node-14.17.0-green)
-![![yarn]](https://img.shields.io/badge/yarn-1.22.10-blue)
-![![eslint]](https://img.shields.io/badge/eslint-^7.32.0-blue)
-![![typescript]](https://img.shields.io/badge/types-TypeScript-blue)
+[![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/joaovictordantasj/SearchDevs/LICENSE)
+!['node-version'](https://img.shields.io/badge/node-14.17.5-green)
+!['yarn-version'](https://img.shields.io/badge/yarn-1.22.11-blue)
+!['typescript-version'](https://img.shields.io/badge/typescript-4.3.5-blue)
 
-The propose of this project is offer a preconfigured template of an Next App
-with typescript, styled-components and eslint.
+> This project is a simple Open Graph image generator for your meta tags using Typescript and NextJS, you can modify the content, font and color of the main text, just like the secondary text. You can also change the background color of the image, or if you prefer you can color the URL of an image to be the background.
 
-This project already came configured with:
+### You can check out the project [here](https://og-image-generator-pi.vercel.app/)
 
-* [Husky](https://www.npmjs.com/package/husky)
+![project_demo](https://user-images.githubusercontent.com/64330605/132852933-e070395c-b149-479e-a501-0b6a1b8e2acf.gif)
 
-* [Eslint](https://eslint.org/)
-
-* [TypeScript](https://www.typescriptlang.org/)
-
-* [Dependabot](https://dependabot.com/)
-
-* [GitHub Actions](https://github.com/features/actions)
-
-* [styled-components](https://styled-components.com/)
-
-* Theme Swicher - Component inside project.
-
----
-
-## Instructions
-
-Clone this repo to your machine with this command:
-
-```bash
-git clone git@github.com:victordantasdev/test.git MY_AWESOME_PROJECT
-```
-
-Open `package.json` file and change the name of project:
-
-```json
-{
-  "name": "my-awesome-project",
-  ...
-}
-```
-
-Now to install all dependencies:
-
-```bash
-yarn
-```
-
-To run project:
-
-```bash
-yarn dev
-```
-
-To build project:
-
-```bash
-yarn build
-```
-
-To commit new changes:
-
-```bash
-yarn commit
-```
+This project is based on this [video](https://youtu.be/V5rWRA0phLw) form [Mário Souto](https://github.com/omariosouto).
